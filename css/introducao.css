@@ -1,0 +1,70 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 1.87rem;
+  position: relative;
+}
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(../img/detalhe.svg) no-repeat;
+  position: absolute;
+  top: -15px;
+  left: -35px;
+  z-index: -1;
+}
+.introducao p {
+  color: #525252;
+  font-size: 1.5rem;
+}
+@media (max-width: 960px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+  .introducao h1::before {
+    width: 300px;
+    height: 80px;
+    left: -40;
+    top: -20;
+  }
+}
+@media (max-width: 780px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+  }
+  .introducao h1::before {
+    width: 150px;
+    height: 30px;
+    left: -30;
+    top: -40px;
+  }
+  .introducao p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 500px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .introducao img {
+    display: none;
+  }
+  .introducao {
+    align-items: center;
+  }
+}
